@@ -16,7 +16,8 @@ const state = {
   polylines: {},
   photos: [],
   routeAnimator: null,
-  movingMarker: null
+  movingMarker: null,
+  timelineActiveEl: null
 };
 
 async function fetchJson(path) {
@@ -134,6 +135,57 @@ function cityName(cityKey) {
   return state.cityMeta[cityKey]?.name || cityKey;
 }
 
+function setActiveTimelineItem(element) {
+  if (state.timelineActiveEl) {
+    state.timelineActiveEl.classList.remove("is-active");
+  }
+  state.timelineActiveEl = element;
+  if (state.timelineActiveEl) {
+    state.timelineActiveEl.classList.add("is-active");
+  }
+}
+
+function parseRouteText(value) {
+  const text = String(value || "");
+  if (!text.includes("->")) return null;
+  const parts = text.split("->").map((part) => part.trim());
+  if (parts.length !== 2) return null;
+  const fromKey = resolveCityKey(parts[0]);
+  const toKey = resolveCityKey(parts[1]);
+  if (!fromKey || !toKey) return null;
+  return { fromKey, toKey };
+}
+
+function findRouteForTimelineItem(item) {
+  const routeFromCityField = parseRouteText(item.city);
+  const routeFromTitle = parseRouteText(item.title);
+  const target = routeFromCityField || routeFromTitle;
+  if (!target) return null;
+
+  const samePairRoutes = state.routes.filter(
+    (route) => route.fromKey === target.fromKey && route.toKey === target.toKey
+  );
+  if (!samePairRoutes.length) return null;
+
+  const bestByDate = samePairRoutes.find((route) => String(route.date).slice(0, 10) === String(item.date).slice(0, 10));
+  return bestByDate || samePairRoutes[0];
+}
+
+function focusTimelineItem(item, cardElement) {
+  const route = findRouteForTimelineItem(item);
+  if (route) {
+    setActiveTimelineItem(cardElement);
+    selectRoute(route.id, true);
+    return;
+  }
+
+  const cityKey = resolveCityKey(item.city);
+  if (cityKey) {
+    setActiveTimelineItem(cardElement);
+    selectCity(cityKey, true);
+  }
+}
+
 function renderTimeline() {
   const container = document.getElementById("timeline");
   container.innerHTML = "";
@@ -142,12 +194,21 @@ function renderTimeline() {
     const item = items[i];
     const card = document.createElement("article");
     card.className = "timeline-item";
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
     card.style.animationDelay = `${i * 80}ms`;
     card.innerHTML = `
       <div class="date">${item.date}</div>
       <div class="title">${item.title}</div>
       <div class="meta">${item.city}</div>
     `;
+    card.addEventListener("click", () => focusTimelineItem(item, card));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        focusTimelineItem(item, card);
+      }
+    });
     container.appendChild(card);
   }
 }

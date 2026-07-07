@@ -151,6 +151,23 @@ section h2 {
   transform: translateY(10px);
   opacity: 0;
   animation: revealUp 0.45s ease forwards;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(126, 255, 217, 0.7);
+}
+
+.timeline-item:focus-visible {
+  outline: 2px solid #7effd9;
+  outline-offset: 2px;
+}
+
+.timeline-item.is-active {
+  border-color: rgba(126, 255, 217, 0.85);
+  box-shadow: 0 0 0 2px rgba(126, 255, 217, 0.22);
 }
 
 .timeline-item .date {

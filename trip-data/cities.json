@@ -1,0 +1,30 @@
+{
+  "istanbul": {
+    "name": "Istanbul",
+    "coords": [41.0082, 28.9784],
+    "description": "Gezi baslangic noktasi.",
+    "summary": "6 Agustos oncesi hazirliklar burada tamamlanir.",
+    "highlights": ["baslangic", "hazirlik"]
+  },
+  "sofia": {
+    "name": "Sofia",
+    "coords": [42.6977, 23.3219],
+    "description": "Transfer ve gece konaklama duragi.",
+    "summary": "Gidis ve donuste kritik gecis sehri.",
+    "highlights": ["transfer", "konaklama"]
+  },
+  "milan": {
+    "name": "Milan",
+    "coords": [45.4642, 9.19],
+    "description": "Sehir bulusmasi ve kultur rotasi.",
+    "summary": "7-9 Agustos arasi merkez gezi gunleri.",
+    "highlights": ["duomo", "navigli", "kultur"]
+  },
+  "nice": {
+    "name": "Nice",
+    "coords": [43.7102, 7.262],
+    "description": "Sahil ve old town gezi duragi.",
+    "summary": "10-12 Agustos arasi deniz kiyisi rotasi.",
+    "highlights": ["promenade", "old-town", "sahil"]
+  }
+}

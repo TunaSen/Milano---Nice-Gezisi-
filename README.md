@@ -18,6 +18,7 @@ Bu repo, Milano ve Nice gezi planinizi tek bir web sayfasinda toplamak icin hazi
 - `assets/js/app.js` -> Dinamik veri yukleme ve render
 - `trip-data/` -> Tum json verileri
   - `site-config.json` -> GitHub API ayarlari
+  - `cities.json` -> Harita marker koordinatlari ve sehir ozetleri
   - `itinerary.json` -> Gun gun plan
   - `flights/*.json` -> Ucus/ulasim girdileri
   - `stays/*.json` -> Konaklama girdileri
@@ -72,3 +73,5 @@ Bu komut su dosyalari otomatik acar:
 
 - Site, JSON dosyalarini ve fotograflari GitHub API ile okur.
 - Public repo oldugu surece eklediginiz yeni json/fotograflar otomatik gorunur.
+- Haritadaki sehir marker'ina tiklayinca o sehre ait ulasim/konaklama/yer/fotograflar acilir.
+- Haritadaki rota cizgisine tiklayinca yolculuk bilgisi ve bilet linkleri acilir.

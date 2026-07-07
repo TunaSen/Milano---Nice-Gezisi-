@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-13",
+  "from": "Nice",
+  "to": "Sofia",
+  "transport": "Ucak",
+  "status": "Planlandi",
+  "note": "Nice -> Sofia ucusu.",
+  "documents": [
+    {
+      "label": "Bilet dosyalari",
+      "path": "documents/flights/2026-08-13-nice-sofia/.gitkeep"
+    }
+  ]
+}

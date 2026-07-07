@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-10",
+  "from": "Milan",
+  "to": "Nice",
+  "transport": "Ucak / Otobus / Tren",
+  "status": "Planlandi",
+  "note": "Ulasim notu.",
+  "documents": [
+    {
+      "label": "Bilet dosyalari",
+      "path": "documents/flights/2026-08-10-milan-nice/.gitkeep"
+    }
+  ]
+}

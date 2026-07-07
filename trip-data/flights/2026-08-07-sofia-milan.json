@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-07",
+  "from": "Sofia",
+  "to": "Milan",
+  "transport": "Ucak",
+  "status": "Planlandi",
+  "note": "Tuna sabah ucusu ile Milan'a varis.",
+  "documents": [
+    {
+      "label": "Bilet dosyalari",
+      "path": "documents/flights/2026-08-07-sofia-milan/.gitkeep"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-09",
+  "from": "Milan",
+  "to": "Nice",
+  "transport": "Otobus",
+  "status": "Planlandi",
+  "note": "9'u 10'a baglayan gece otobus gecisi.",
+  "documents": [
+    {
+      "label": "Otobus bileti",
+      "path": "documents/flights/2026-08-09-milan-nice-bus/.gitkeep"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milano - Nice Gezi Panosu</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Milano - Nice Gezi Panosu</h1>
+      <p>Ucuslar, konaklama, gezilecek yerler ve fotograflar tek ekranda.</p>
+      <div id="repo-badge" class="badge"></div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>Rota Akisi</h2>
+        <div id="itinerary" class="card-grid"></div>
+      </section>
+
+      <section>
+        <h2>Ucus ve Ulasim</h2>
+        <div id="flights" class="card-grid"></div>
+      </section>
+
+      <section>
+        <h2>Konaklama</h2>
+        <div id="stays" class="card-grid"></div>
+      </section>
+
+      <section>
+        <h2>Gezilecek Yerler</h2>
+        <div id="places" class="card-grid"></div>
+      </section>
+
+      <section>
+        <h2>Fotograf Galerisi</h2>
+        <div id="gallery" class="gallery-grid"></div>
+      </section>
+    </main>
+
+    <template id="empty-state-template">
+      <article class="card empty-state">
+        <h3>Veri bulunamadi</h3>
+        <p>Bu bolum icin henuz kayit eklenmemis.</p>
+      </article>
+    </template>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

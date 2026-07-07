@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "date": "2026-08-06",
+      "city": "Sofia",
+      "title": "Tuna Istanbul -> Sofia",
+      "note": "Aksam varis ve dinlenme.",
+      "tags": ["ulasim", "hazirlik"]
+    },
+    {
+      "date": "2026-08-07",
+      "city": "Milan",
+      "title": "Milan bulusma",
+      "note": "Tuna ucakla, Melisa otobusle sabah varis.",
+      "tags": ["bulusma", "milan"]
+    },
+    {
+      "date": "2026-08-07 / 2026-08-09",
+      "city": "Milan",
+      "title": "Milano gezi gunleri",
+      "note": "Sehir merkezi, yemek ve kultur rotasi.",
+      "tags": ["gezi"]
+    },
+    {
+      "date": "2026-08-09 gece",
+      "city": "Milan -> Nice",
+      "title": "Gece otobus gecisi",
+      "note": "9'u 10'a baglayan gece Nice'e gecis.",
+      "tags": ["ulasim", "otobus"]
+    },
+    {
+      "date": "2026-08-10 / 2026-08-12",
+      "city": "Nice",
+      "title": "Nice gezi gunleri",
+      "note": "Deniz kiyisi ve eski sehir bolgesi.",
+      "tags": ["gezi", "nice"]
+    },
+    {
+      "date": "2026-08-13",
+      "city": "Nice -> Sofia",
+      "title": "Sofia ucusu",
+      "note": "Aksam Sofia'da konaklama.",
+      "tags": ["ucus", "konaklama"]
+    },
+    {
+      "date": "2026-08-14",
+      "city": "Sofia -> Istanbul",
+      "title": "Araba ile donus",
+      "note": "Ogleden sonra yola cikis.",
+      "tags": ["dönus", "araba"]
+    }
+  ]
+}

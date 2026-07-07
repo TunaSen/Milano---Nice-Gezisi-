@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-06",
+  "from": "Istanbul",
+  "to": "Sofia",
+  "transport": "Ucak",
+  "status": "Planlandi",
+  "note": "Tuna icin Istanbul -> Sofia ucusu.",
+  "documents": [
+    {
+      "label": "Bilet dosyalari",
+      "path": "documents/flights/2026-08-06-istanbul-sofia/.gitkeep"
+    }
+  ]
+}
